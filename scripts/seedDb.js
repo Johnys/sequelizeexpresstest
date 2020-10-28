@@ -1,6 +1,10 @@
-const { Profile, Contract, Job } = require('../src/model');
+const LoadModels = require('../src/load_models');
+const Contract = require('../src/contract/model');
+const Profile = require('../src/profile/model');
+const Job = require('../src/job/model');
 
 /* WARNING THIS WILL DROP THE CURRENT DATABASE */
+LoadModels.init();
 seed();
 
 async function seed() {
@@ -225,6 +229,6 @@ async function seed() {
       paymentDate:'2020-08-14T23:11:26.737Z',
       ContractId: 3,
     }),
-    
+
   ]);
 }

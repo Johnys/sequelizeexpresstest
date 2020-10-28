@@ -4,7 +4,7 @@ const {
   TEXT,
   ENUM,
 } = require('sequelize');
-const { sequelize } = require('../sequelize');
+const { sequelize } = require('../db');
 
 class Contract extends Model {
   static mapRelations({ Profile, Job }) {

@@ -1,13 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { sequelize } = require('./sequelize');
 const LoadRoutes = require('./load_routes');
+const LoadModels = require('./load_models');
 
 const app = express();
 app.use(bodyParser.json());
-app.set('sequelize', sequelize);
-app.set('models', sequelize.models);
 
+LoadModels.init();
 LoadRoutes.init(app);
 
 module.exports = app;

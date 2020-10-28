@@ -4,7 +4,7 @@ const {
   DECIMAL,
   ENUM,
 } = require('sequelize');
-const { sequelize } = require('../sequelize');
+const { sequelize } = require('../db');
 
 class Profile extends Model {
   static mapRelations({ Contract }) {

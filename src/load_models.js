@@ -2,7 +2,7 @@ const Contract = require('./contract/model');
 const Job = require('./job/model');
 const Profile = require('./profile/model');
 
-class LoadModules {
+class LoadModels {
   static init() {
     Contract.mapRelations({ Profile, Job });
     Job.mapRelations({ Contract });
@@ -10,4 +10,4 @@ class LoadModules {
   }
 }
 
-module.exports = LoadModules;
+module.exports = LoadModels;
